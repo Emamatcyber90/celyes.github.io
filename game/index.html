@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Simple guess the number game">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00BCD4">
   <title>Guess the number</title>
   <style type="text/css">
     
@@ -28,7 +30,8 @@
   <h1>Number guessing game</h1>
   <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.
   </p>
-  Enter a guess: <input type="text">
+  <label for="number">Enter a guess: </label>
+  <input type="text" id="number" name="number">
   <button>Submit guess</button> 
   <p id="previous"></p>
   <p id="evaluation"></p>
