@@ -39,13 +39,30 @@
 			background: #34495e;
 			transform: skewY(-2deg);
 		}
+		#toast{
+			position: absolute;
+			background: #41b883;
+			color: #fff;
+			padding: 10px;
+			top: 35px;
+			right: 30px;
+			border-radius: 50px;
+			transition: 0.3s ease;
+			animation: 3s toastAnimation linear;
+		}
+		@keyframes toastAnimation{
+			0%{opacity: 0;}
+			5%{opacity: 1; top: 45px;}
+			90%{opacity: 1; top: 45px;}
+			100%{opacity: 0; top: 35px;}
+		}
 	</style>
 </head>
 <body>
 	<h1>Rate this app</h1>
 	<div id="app">
 		<br>
-		<span @mouseover="rate=item" class="fa fa-star fa-3x blue" v-for="item in parseInt(rate)"></span><span @mouseover="rate+=item" class="fa fa-star fa-3x grey-blue" v-for="item in parseInt(5 - rate)"></span>
+		<span @mouseover="rate=item" @click="conf" class="fa fa-star fa-3x blue" v-for="item in parseInt(rate)"></span><span @mouseover="rate+=item" class="fa fa-star fa-3x grey-blue" v-for="item in parseInt(5 - rate)"></span>
 		<br>
 		<br>
 		<template v-if="rate > 1">{{rate}} Stars</template>
@@ -64,8 +81,8 @@
 	<div class="green-block"></div>
 	<div class="grey-block"></div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
-	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	 -->
+	<!-- vue alert plugin -->
+	<script src="https://unpkg.com/vue-toasted"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
