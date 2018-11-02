@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Vue JS</title>
+	<!--
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	-->
+	<link rel="stylesheet" type="text/css" href="http://localhost/cdn/libraries/fontawesome/css/all.css">
+	<style type="text/css">
+		body{
+			text-align: center;
+			padding-top: 100px; 
+			font-family: sans-serif;
+		}
+		span{
+			padding: 5px;	
+			cursor: pointer;
+		}
+		.blue{
+			color: #00f;
+		}
+		.grey{
+			color:#ccc;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="app">
+		<br>
+		<span @mouseover="rate=item" class="fa fa-star fa-3x blue" v-for="item in parseInt(rate)"></span><span @mouseover="rate+=item" class="fa fa-star fa-3x grey" v-for="item in parseInt(5 - rate)"></span>
+		<br>
+		<br>
+		<template v-if="rate > 1">{{rate}} Stars</template>
+		<template v-else>{{rate}} Star</template>
+	</div>	
+
+	<script src="js/vue.js"></script>
+	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	 -->
+	<script src="js/script.js"></script>
+</body>
+</html>
