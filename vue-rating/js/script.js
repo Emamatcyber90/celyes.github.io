@@ -8,7 +8,7 @@ var vapp = new Vue({
         conf: function(){
             var element = document.createElement('p');
             element.setAttribute('id', 'toast');
-            var text = document.createTextNode('Thanks ! ');
+            var text = document.createTextNode('Thanks!');
             element.appendChild(text);
             document.body.appendChild(element);
             setTimeout(function(){
