@@ -1,0 +1,17 @@
+ul{
+    li{
+        display: inline-block;
+        a{
+            padding: 5px 15px;
+            color: #000;
+            font: {
+                weight: 400
+            }
+        }
+        &:hover{
+            a{      
+                color:#2196F6;
+            }
+        }
+    }
+}
