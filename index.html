@@ -14,7 +14,6 @@
 </head>
 <body>
     <div id="app">
-        <div v-if="name">
             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f70;">
                 <div class="container">
                         <a class="navbar-brand" href="#">{{title}}</a>
@@ -41,29 +40,43 @@
                             </div>
                         </div>
                 </div>
-                </nav>
-                <div class="container text-right">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <br>
-                            <div class="alert alert-primary" role="alert">
-                                <span class="fa fa-info-circle"></span>
-                                مرحبا بك يا {{name}} 
-                            </div>
-                            <br>
-                            <ul class="list-group">
-                                <li class="list-group-item disabled">
-                                    <b>المطلوب: </b>إختر إثنين من بين التطبيقات الآتية و قم بإنشاء مثيل له بأسلوبك 
-                                </li>
-                                <li class="list-group-item"><a href="/galaxy">صفحة بسيطة لوكالة إنشاء مواقع على الانترنت</a></li>
-                                <li class="list-group-item"><a href="/login">نموذج تسجيل دخول</a></li>
-                                <li class="list-group-item"><a href="/persona">قالب بسيط لموقع خاص بتطبيق موبايل</a></li>
-                                <li class="list-group-item"><a href="/simple-store">موقع لشركة بيع لوازم الأطفال</a></li>
-                            </ul>
+            </nav>
+            <div class="container text-right">
+                <div class="row pr-1">
+                    <div class="col-sm-12 pr-5">
+                        <br>
+                        <br>
+                        <div v-if="name" class="alert alert-primary" role="alert">
+                            <span class="fa fa-info-circle"></span>
+                            مرحبا بك يا {{name}} 
                         </div>
+                        <div v-else class="alert alert-danger">
+                            <span class="fa fa-warning"></span>
+                            يجب عليك إدخال إسمك
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 col-xs-12">
+                                <input v-model="name" type="text" class="form-control" placeholder="الإسم">
+                            </div>
+                        </div>
+                        <br>
                     </div>
                 </div>
-        </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="mr-5">
+                            <span class="fa fa-info-circle"></span>
+                            <b>المطلوب: </b>إختر إثنين من بين التطبيقات الآتية و قم بإنشاء مثيل له بأسلوبك 
+                        </p>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="/galaxy">صفحة بسيطة لوكالة إنشاء مواقع على الانترنت</a></li>
+                            <li class="list-group-item"><a href="/login">نموذج تسجيل دخول</a></li>
+                            <li class="list-group-item"><a href="/persona">قالب بسيط لموقع خاص بتطبيق موبايل</a></li>
+                            <li class="list-group-item"><a href="/simple-store">موقع لشركة بيع لوازم الأطفال</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         <div class="container" v-else>
             <div class="row text-right">
                 <div class="col-sm-12">
