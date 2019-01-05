@@ -1,3 +1,13 @@
+body{
+    direction: rtl;
+}
+.navbar-dark {
+    .navbar-nav {
+        .nav-link{
+            color: rgba(255,255,255,1);
+        }
+    }
+}
 ul{
     li{
         display: inline-block;
