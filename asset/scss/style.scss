@@ -25,3 +25,16 @@ ul{
         }
     }
 }
+.btn-group{
+    direction: ltr;
+    .btn{
+        background-color: #09f;
+        &:hover{
+            background: #07f;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

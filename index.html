@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="app">
-            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f70;">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #09f;">
                 <div class="container">
                         <a class="navbar-brand" href="#">{{title}}</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,27 +41,7 @@
                         </div>
                 </div>
             </nav>
-            <div class="container text-right">
-                <div class="row pr-1">
-                    <div class="col-sm-12 pr-5">
-                        <br>
-                        <br>
-                        <div v-if="name" class="alert alert-primary" role="alert">
-                            <span class="fa fa-info-circle"></span>
-                            مرحبا بك يا {{name}} 
-                        </div>
-                        <div v-else class="alert alert-danger">
-                            <span class="fa fa-warning"></span>
-                            يجب عليك إدخال إسمك
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4 col-xs-12">
-                                <input v-model="name" type="text" class="form-control" placeholder="الإسم">
-                            </div>
-                        </div>
-                        <br>
-                    </div>
-                </div>
+            <div class="container text-right mt-5">
                 <div class="row">
                     <div class="col-sm-12">
                         <p class="mr-5">
@@ -76,10 +56,22 @@
                         </ul>
                     </div>
                 </div>
+                <div class="row mt-4">
+                    <div class="btn-group mx-auto" role="group" aria-labeled="Other links">
+                        <button type="button" class="btn">
+                            <a href="/game">JavaScript simple game</a>
+                        </button>
+                        <button type="button" class="btn">
+                            <a href="/vue-rating">Rating system with Vue.js</a>
+                        </button>
+                        <button type="button" class="btn">
+                            <a href="/vue-start/">Vue.js starter template</a>
+                        </button>
+                    </div>
+                </div>
             </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
     <script src="asset/js/main.js"></script>
 </body>
