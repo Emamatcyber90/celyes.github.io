@@ -20,7 +20,7 @@
             <div class="term-body" id="term-body" v-on:click="focusElement">
                 <div class="input">
                     <span>{{user}}@{{pc}}:~$</span>
-                    <input type="text" id="caret" v-model="content" v-on:keyup.enter="showOutput">
+                    <input type="text" id="caret" autocomplete="off" v-model="content" v-on:keyup.enter="showOutput">
                 </div>
             </div>
         </div>
@@ -36,8 +36,8 @@
                 </div>
                 <div class="modal-body">
                     <form onsubmit="return false" v-on:submit="bindValues">
-                        <input type="text" placeholder="Name" id="user" v-model="userInput">
-                        <input type="text" placeholder="PC name" id="pc" v-model="pcInput">
+                        <input type="text" placeholder="Name" id="user" autocomplete="off" v-model="userInput">
+                        <input type="text" placeholder="PC name" id="pc" autocomplete="off" v-model="pcInput">
                         <button v-on:click="bindValues" class="btn-mac">Go</button>
                         <p>
                             <small>Click enter to skip</small>
