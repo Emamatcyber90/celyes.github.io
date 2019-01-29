@@ -2,6 +2,12 @@ body{
     margin: 0; 
     padding: 0;
     font-family: "Arial", Helvetica, sans-serif;
+    background: {
+        image: url('https://www.dailydot.com/wp-content/uploads/180/b6/41593ac0068c710f262a5525e9e9a5cf.jpg');
+        repeat: no-repeat;
+        size: cover;
+        attachment: fixed;
+    }
 }
 h4{
     text-align: center;
@@ -16,7 +22,7 @@ h4{
     height: 500px;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
     background: {
-        color: #444;
+        color: rgba(20,20,20,0.9);
     }
     border: {
         radius: 5px;
