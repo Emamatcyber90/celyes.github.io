@@ -1,9 +1,12 @@
-body{
+@function image-url($name){
+    @return unquote(url("http://celyes.github.io/termulator/assets/img/" + $name));
+}
+html{
     margin: 0; 
     padding: 0;
     font-family: "Arial", Helvetica, sans-serif;
     background: {
-        image: url('https://www.dailydot.com/wp-content/uploads/180/b6/41593ac0068c710f262a5525e9e9a5cf.jpg');
+        image: image-url('bg.jpg');
         repeat: no-repeat;
         size: cover;
         attachment: fixed
